@@ -25,7 +25,11 @@
         <activity
             android:name=".BarcodeScanningActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ViewDBActivity"></activity>
+        <activity
+            android:name=".ViewDBActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
     </application>
 
 </manifest>

@@ -6,12 +6,71 @@
     android:layout_height="match_parent"
     tools:context="com.example.ferries.barcodescanner.ViewDBActivity">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textview_results" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="45dp">
+
+            <LinearLayout
+                android:id="@+id/ll_entries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backDay"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ll_entries"
-        android:padding="15dp"
-        android:orientation="vertical"
-        ></LinearLayout>
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/forwardDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/searchUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sticker"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="72dp" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
